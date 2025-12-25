@@ -9,11 +9,10 @@
     
     <style>
         :root {
-           --cor-fundo: #ffffff;
-            --cor-texto: #1a1a1a;       /* Preto quase puro para legibilidade */
-            --verde-escuro: #1b2e1e;    /* Verde floresta profundo */
-            --verde-suave: #f4f7f4;     /* Fundo verde muito claro para contraste */
-            --cinza-linha: #e0e0e0;
+            --cor-fundo: #ffffff;
+            --cor-texto: #1a1a1a;
+            --verde-escuro: #1b2e1e; /* Verde Floresta */
+            --verde-suave: #f4f7f4;  /* Subtom para caixas */
         }
 
         * { box-sizing: border-box; }
@@ -25,6 +24,7 @@
             background-color: var(--cor-fundo);
             color: var(--cor-texto);
             -webkit-font-smoothing: antialiased;
+            text-align: center;
         }
 
         /* Hero / Cabeçalho */
@@ -34,9 +34,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            background-color: var(--cor-suave);
-            border-bottom: 1px solid #f0f0f0;
+            background-color: var(--verde-escuro);
+            color: white;
+            padding: 20px;
         }
 
         .save-the-date {
@@ -44,8 +44,7 @@
             letter-spacing: 0.4em;
             text-transform: uppercase;
             margin-bottom: 20px;
-            color: var(--cor-detalhe);
-            font-weight: 400;
+            opacity: 0.8;
         }
 
         h1 {
@@ -60,14 +59,16 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 10px;
+            letter-spacing: 3px;
         }
 
         /* Secções */
         section {
-            padding: 100px 20px;
+            padding: 80px 20px;
             max-width: 800px;
             margin: auto;
-            text-align: center;
         }
 
         h2 {
@@ -75,7 +76,7 @@
             font-size: 2rem;
             font-weight: 400;
             margin-bottom: 30px;
-            position: relative;
+            color: var(--verde-escuro);
         }
 
         h2::after {
@@ -83,7 +84,7 @@
             display: block;
             width: 40px;
             height: 1px;
-            background: var(--cor-detalhe);
+            background: var(--verde-escuro);
             margin: 15px auto 0;
         }
 
@@ -91,57 +92,51 @@
             font-size: 1.05rem;
             line-height: 1.8;
             font-weight: 300;
-            color: #555;
+            color: #333;
         }
 
         .local-box {
-            background-color: var(--cor-suave);
+            background-color: var(--verde-suave);
             padding: 40px;
-            border-radius: 4px;
             margin-top: 30px;
+            border-left: 4px solid var(--verde-escuro);
+            text-align: center;
         }
 
-        /* Botão Estilizado */
+        /* Botões */
         .btn {
             display: inline-block;
             margin-top: 30px;
             padding: 18px 45px;
-            border: 1px solid var(--cor-detalhe);
-            color: var(--cor-detalhe);
+            border: 1px solid var(--verde-escuro);
+            color: var(--verde-escuro);
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 0.75rem;
             transition: all 0.4s ease;
-            background: transparent;
         }
 
         .btn:hover {
-            background-color: var(--cor-detalhe);
+            background-color: var(--verde-escuro);
             color: white;
-            letter-spacing: 3px;
         }
 
-        /* Divisor */
         .separator {
             width: 1px;
-            height: 80px;
-            background-color: var(--cor-detalhe);
+            height: 60px;
+            background-color: var(--verde-escuro);
             margin: 0 auto;
-            opacity: 0.3;
+            opacity: 0.2;
         }
 
         footer {
             padding: 80px 20px;
-            background-color: var(--cor-suave);
+            background-color: var(--verde-suave);
             font-family: 'Playfair Display', serif;
             font-style: italic;
             font-size: 1.2rem;
-        }
-
-        @media (max-width: 600px) {
-            header { height: 80vh; }
-            section { padding: 60px 20px; }
+            color: var(--verde-escuro);
         }
     </style>
 </head>
@@ -149,47 +144,22 @@
 
     <header>
         <span class="save-the-date">Convidamos para o casamento de</span>
-        <h1>Sara & Pedro</h1>
+        <h1>Nome & Nome</h1>
         <div class="data-header">10 . 10 . 2026</div>
     </header>
 
     <section>
         <h2>A Celebração</h2>
-        <p>A vossa presença é o que tornará este dia verdadeiramente especial. <br>
-        Juntem-se a nós para celebrar o amor, a amizade e o futuro.</p>
+        <p>A vossa presença é o que tornará este dia verdadeiramente especial.</p>
         
         <div class="local-box">
-            <p><strong>ONDE</strong><br>
-            Igreja de Nossa Senhora do Ó, Vilar
-            Solar de Pancas <br>
-            Solar de Quinta de Pancas, 2580-354 Alenquer, </p>
-            <p><strong>QUANDO</strong><br>
+            <p><strong>CERIMÓNIA</strong><br>
+            Igreja de Nossa Senhora do Ó, Vilar</p>
+            
+            <p><strong>COPO D'ÁGUA E FESTA</strong><br>
+            Solar de Pancas<br>
+            Quinta de Pancas, 2580-354 Alenquer</p>
+            
+            <p><strong>HORÁRIO</strong><br>
             Sábado, 10 de Outubro de 2026<br>
-            Às 14:30 horas</p>
-        </div>
-        <a href="https://maps.google.com" target="_blank" class="btn">Ver Localização</a>
-    </section>
-
-    <div class="separator"></div>
-
-    <section>
-        <h2>Confirmação</h2>
-        <p>Para nos ajudar com a organização, pedimos a gentileza de confirmar a sua presença até ao dia <strong>10 de Agosto de 2026</strong>.</p>
-        
-        <a href="https://wa.me/351910000000?text=Olá! Ficamos muito felizes com o convite e confirmamos a nossa presença no dia 10/10/2026." class="btn">Confirmar via WhatsApp</a>
-    </section>
-
-    <div class="separator"></div>
-
-    <section>
-        <h2>Presentes</h2>
-        <p>O nosso maior presente é ter-vos connosco. Caso desejem contribuir para a nossa nova etapa, podem consultar a nossa lista ou IBAN clicando abaixo.</p>
-        <a href="#" class="btn">Lista de Presentes</a>
-    </section>
-
-    <footer>
-        Até breve!
-    </footer>
-
-</body>
-</html>
+            Às
